@@ -40,9 +40,10 @@ window.onload = () => {
         loadPlaces(position.coords)
             .then((places) => {
                 places.forEach((place) => {
+
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
-
+                    console.log(place)
                     // add place name
                     const placeText = document.createElement('a-link');
                     placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
